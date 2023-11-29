@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--        header-->
+            <ImageView
+                android:id="@+id/sophia_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sophia_img"
+                android:layout_marginTop="57dp"
+                android:layout_marginStart="20dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blur_ellipse"
+                android:layout_toEndOf="@id/sophia_pic"/>
+
+            <TextView
+                android:id="@+id/hello_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello"
+                android:textSize="12sp"
+                android:textColor="@color/gray_light_2"
+                android:layout_below="@id/sophia_pic"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/montserrat_medium"/>
+
+            <TextView
+                android:id="@+id/sophia_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sophia"
+                android:layout_below="@id/hello_text"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/dmsans_medium"/>
+            <!--        header-->
+
+            <ImageView
+                android:id="@+id/notif_bell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification_icon"
+                android:layout_toEndOf="@id/sophia_pic"
+                android:layout_marginStart="310dp"
+                android:layout_marginTop="59dp"/>
+
+            <!--        search bar-->
+            <ImageView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/gray_bg"
+                android:layout_below="@id/sophia_text"
+                android:layout_marginTop="24dp"
+                android:paddingHorizontal="20dp"/>
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search"
+                android:layout_below="@id/sophia_text"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="37dp"/>
+
+            <TextView
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:textColor="@color/gray_dark"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_toEndOf="@id/search_icon"
+                android:layout_below="@id/sophia_text"
+                android:layout_marginTop="37dp"
+                android:layout_marginStart="11dp"/>
+            <!--        search bar-->
+
+            <!--        start exercises-->
+            <ImageView
+                android:id="@+id/orange_bg"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@id/search_bar"
+                android:src="@drawable/gradient_orange"
+                android:paddingHorizontal="33dp"
+                android:layout_marginTop="50dp"/>
+
+            <ImageView
+                android:id="@+id/girl_stretching_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/girlstretchingback"
+                android:layout_below="@id/search_bar"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/barbel"
+                android:layout_below="@id/search_bar"
+                android:layout_toEndOf="@id/girl_stretching_back"
+                android:layout_marginTop="156dp"/>
+
+            <TextView
+                android:id="@+id/fit_young_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fit_young_woman"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_below="@id/search_bar"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="70dp"/>
+
+            <ImageView
+                android:id="@+id/yellow_bg"
+                android:layout_width="110dp"
+                android:layout_height="27dp"
+                android:src="@drawable/yellow_bg"
+                android:layout_below="@id/fit_young_text"
+                android:layout_toEndOf="@id/girl_stretching_back"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_exercise"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:fontFamily="@font/dmsans_bold"
+                android:layout_below="@id/fit_young_text"
+                android:layout_toEndOf="@id/girl_stretching_back"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="22dp"/>
+            <!--        start exercises-->
+            <!--        select your goal-->
+            <TextView
+                style="@style/TitleContent"
+                android:id="@+id/set_goal_title"
+                android:text="@string/select_your_goal"
+                android:layout_below="@+id/girl_stretching_back"/>
+
+            <ImageView
+                android:id="@+id/goal_item1"
+                style="@style/SelectGoals"/>
+
+            <TextView
+                android:id="@+id/goal_item1_text"
+                style="@style/SelectGoalsText"
+                android:text="@string/loose_weight"/>
+
+            <ImageView
+                android:id="@+id/goal_item2"
+                style="@style/SelectGoals.Active"
+                android:layout_toEndOf="@id/goal_item1"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/goal_item2_text"
+                style="@style/SelectGoalsText.Actve"
+                android:text="@string/gain_weight"
+                android:layout_toEndOf="@id/goal_item1"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"/>
+
+            <ImageView
+                android:id="@+id/goal_item3"
+                style="@style/SelectGoals"
+                android:layout_toEndOf="@id/goal_item2"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/goal_item3_text"
+                style="@style/SelectGoalsText.Actve"
+                android:text="@string/body_building"
+                android:layout_toEndOf="@id/goal_item2"
+                android:layout_marginStart="26dp"/>
+
+            <ImageView
+                android:id="@+id/goal_item4"
+                style="@style/SelectGoals"
+                android:layout_toEndOf="@id/goal_item3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="-30dp"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/goal_item4_text"
+                style="@style/SelectGoalsText"
+                android:layout_marginStart="48dp"
+                android:layout_toEndOf="@id/goal_item3"
+                android:text="@string/healty"
+                android:layout_marginEnd="-10dp"
+                android:layout_alignParentEnd="true"/>
+            <!--        select your goal-->
+
+            <!--        category-->
+            <TextView
+                style="@style/TitleContent"
+                android:id="@+id/set_category"
+                android:text="@string/category"
+                android:layout_below="@+id/goal_item1"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                style="@style/SeeAll"
+                android:layout_toEndOf="@id/set_category"
+                android:layout_below="@id/goal_item3"
+                android:layout_marginTop="27dp"/>
+
+            <ImageView
+                style="@style/CategoryItem"
+                android:id="@+id/yoga_cat"
+                android:src="@drawable/yoga"
+                android:layout_marginStart="22dp"/>
+
+            <ImageView
+                style="@style/CategoryItem"
+                android:id="@+id/gym_cat"
+                android:src="@drawable/gym"
+                android:layout_marginStart="27dp"
+                android:layout_toEndOf="@+id/yoga_cat"/>
+
+            <ImageView
+                style="@style/CategoryItem"
+                android:id="@+id/cardio_cat"
+                android:src="@drawable/cardio"
+                android:layout_marginStart="27dp"
+                android:layout_toEndOf="@+id/gym_cat"/>
+
+            <ImageView
+                style="@style/CategoryItem"
+                android:id="@+id/stretch_cat"
+                android:src="@drawable/stretch"
+                android:layout_marginStart="27dp"
+                android:layout_toEndOf="@+id/cardio_cat"/>
+
+            <ImageView
+                style="@style/CategoryItem"
+                android:id="@+id/fullbody_cat"
+                android:src="@drawable/fullbody"
+                android:layout_marginStart="27dp"
+                android:layout_toEndOf="@+id/stretch_cat"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/yoga_text"
+                android:text="@string/yoga"
+                android:layout_below="@id/yoga_cat"
+                android:layout_marginStart="36dp"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/gym_text"
+                android:text="@string/gym"
+                android:layout_below="@id/yoga_cat"
+                android:layout_marginStart="59dp"
+                android:layout_toEndOf="@+id/yoga_text"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/cardio_text"
+                android:text="@string/cardio"
+                android:layout_below="@id/yoga_cat"
+                android:layout_marginStart="51dp"
+                android:layout_toEndOf="@+id/gym_text"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/stretch_text"
+                android:text="@string/stretch"
+                android:layout_below="@id/yoga_cat"
+                android:layout_marginStart="46dp"
+                android:layout_toEndOf="@+id/cardio_text"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/fullbody_text"
+                android:text="@string/full_body"
+                android:layout_below="@id/yoga_cat"
+                android:layout_marginStart="34dp"
+                android:layout_marginEnd="-50dp"
+                android:layout_toEndOf="@+id/stretch_text"/>
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:src="@drawable/line"
+                android:layout_below="@id/yoga_text"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"/>
+            <!--        category-->
+
+            <!--        popular exercises-->
+            <TextView
+                style="@style/TitleContent"
+                android:id="@+id/popular_exercises"
+                android:text="@string/popular_exercise"
+                android:layout_below="@id/yoga_text"
+                android:layout_marginTop="39dp"/>
+
+            <TextView
+                style="@style/SeeAll"
+                android:layout_toEndOf="@id/popular_exercises"
+                android:layout_below="@id/fullbody_text"
+                android:layout_marginTop="41dp"
+                android:layout_marginStart="207dp"/>
+
+            <!--        full shot woman-->
+            <ImageView
+                android:id="@+id/shot_beautiful_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shot_beautiful_sporty"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/popular_exercises"
+                android:layout_marginTop="15dp"/>
+
+            <ImageView
+                android:id="@+id/white_bg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/white_bg"
+                android:layout_below="@+id/popular_exercises"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="300dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart_icon"
+                android:layout_below="@+id/popular_exercises"
+                android:layout_marginTop="31.5dp"
+                android:layout_marginStart="305.8dp"/>
+
+            <TextView
+                android:id="@+id/full_shot_text"
+                style="@style/category_text"
+                android:text="@string/full_shot_woman"
+                android:layout_below="@id/shot_beautiful_girl" />
+
+            <TextView
+                android:id="@+id/beginner_text"
+                style="@style/PopularExerciseText"
+                android:text="@string/beginner"
+                android:layout_below="@id/full_shot_text"/>
+
+            <ImageView
+                android:id="@+id/vertical_line"
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:src="@drawable/vertical_line"
+                android:layout_below="@id/full_shot_text"
+                android:layout_marginTop="10.5dp"
+                android:layout_toEndOf="@id/beginner_text"
+                android:layout_marginStart="10.5dp"/>
+
+            <ImageView
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:layout_below="@id/full_shot_text"
+                android:layout_toEndOf="@id/vertical_line"
+                android:layout_marginTop="10.5dp"
+                android:layout_marginStart="10.5dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:text="@string/min_50"
+                android:layout_below="@id/full_shot_text"
+                android:layout_toEndOf="@id/clock"
+                android:layout_marginStart="5.49dp"/>
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:src="@drawable/line"
+                android:layout_below="@id/beginner_text"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"/>
+            <!--        full shot woman-->
+
+            <!--        looking shocked girl-->
+            <ImageView
+                android:id="@+id/looking_shocked_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/looking_shocked"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/line2"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/white_bg2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/white_bg"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="300dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart_icon"
+                android:layout_below="@+id/line2"
+                android:layout_marginTop="29.8dp"
+                android:layout_marginStart="305.8dp"/>
+
+            <TextView
+                android:id="@+id/looking_shocked_text"
+                style="@style/category_text"
+                android:text="@string/athlete_practicing"
+                android:layout_below="@id/looking_shocked_girl" />
+
+            <TextView
+                android:id="@+id/beginner_text2"
+                style="@style/PopularExerciseText"
+                android:text="@string/beginner"
+                android:layout_below="@id/looking_shocked_text"/>
+
+            <ImageView
+                android:id="@+id/vertical_line2"
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:src="@drawable/vertical_line"
+                android:layout_below="@id/looking_shocked_text"
+                android:layout_marginTop="10.5dp"
+                android:layout_toEndOf="@id/beginner_text2"
+                android:layout_marginStart="10.5dp"/>
+
+            <ImageView
+                android:id="@+id/clock2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:layout_below="@id/looking_shocked_text"
+                android:layout_toEndOf="@id/vertical_line"
+                android:layout_marginTop="10.5dp"
+                android:layout_marginStart="10.5dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:text="@string/min_50"
+                android:layout_below="@id/looking_shocked_text"
+                android:layout_toEndOf="@id/clock"
+                android:layout_marginStart="5.49dp"/>
+            <!--        looking shocked girl-->
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:src="@drawable/line"
+                android:layout_below="@id/beginner_text2"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"/>
+            <!--        popular exercises -->
+
+            <!--        Meal plans-->
+            <TextView
+                style="@style/TitleContent"
+                android:id="@+id/meal_plans"
+                android:text="@string/meal_plans"
+                android:layout_below="@id/line3"
+                android:layout_marginTop="21dp"/>
+
+            <TextView
+                style="@style/SeeAll"
+                android:layout_below="@id/line3"
+                android:layout_toEndOf="@id/meal_plans"
+                android:layout_marginTop="23dp"
+                android:layout_marginStart="245dp"/>
+
+            <ImageView
+                android:id="@+id/greek_salad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/salad1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/meal_plans"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/greek_salad_text"
+                android:text="@string/greek_salad"
+                android:layout_below="@id/greek_salad"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:id="@+id/kcal_150_text"
+                android:text="@string/kcal_150"
+                android:layout_below="@id/greek_salad_text"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:id="@+id/line4"
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:src="@drawable/line"
+                android:layout_below="@id/kcal_150_text"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/fresh_salad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/salad2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/line4"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/fresh_salad_text"
+                android:text="@string/salad_fresh"
+                android:layout_below="@id/fresh_salad"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:id="@+id/kcal_270_text"
+                android:text="@string/kcal_270"
+                android:layout_below="@id/fresh_salad_text"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:id="@+id/line5"
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:src="@drawable/line"
+                android:layout_below="@id/kcal_270_text"
+                android:layout_centerHorizontal="true"/>
+            <!--        meal plans-->
+
+            <!--        additional exercises-->
+            <TextView
+                style="@style/TitleContent"
+                android:id="@+id/additional_exercises"
+                android:text="@string/additional_exercise"
+                android:layout_below="@id/line5"
+                android:layout_marginTop="14dp"/>
+
+            <TextView
+                style="@style/SeeAll"
+                android:layout_below="@id/line5"
+                android:layout_toEndOf="@id/additional_exercises"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="189dp"/>
+
+            <!--        jumping rope    -->
+            <ImageView
+                android:id="@+id/yellow_background"
+                style="@style/AdditionalExercisesBg"
+                android:src="@drawable/yellow_bg"
+                android:layout_below="@id/additional_exercises"
+                android:layout_marginTop="14dp"/>
+
+            <ImageView
+                android:id="@+id/jumping_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jumping"
+                android:layout_below="@id/additional_exercises"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/jumping_rope_text"
+                android:text="@string/jumping_rope"
+                android:layout_below="@id/additional_exercises"
+                android:layout_toEndOf="@id/yellow_background"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"/>
+
+            <ImageView
+                android:id="@+id/calories1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calories"
+                android:layout_below="@id/jumping_rope_text"
+                android:layout_toEndOf="@id/yellow_background"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:id="@+id/kcal_110_text"
+                android:text="@string/kcal_110"
+                android:layout_below="@id/jumping_rope_text"
+                android:layout_toEndOf="@id/calories1"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/vertical_line3"
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:src="@drawable/vertical_line"
+                android:layout_below="@id/jumping_rope_text"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@id/kcal_110_text"
+                android:layout_marginStart="11dp"/>
+
+            <ImageView
+                android:id="@+id/clock3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:layout_below="@id/jumping_rope_text"
+                android:layout_toEndOf="@id/vertical_line3"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="10.5dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:text="@string/min_10"
+                android:layout_below="@id/jumping_rope_text"
+                android:layout_toEndOf="@id/clock3"
+                android:layout_marginStart="5.49dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/beginner_text3"
+                style="@style/PopularExerciseText"
+                android:text="@string/beginner"
+                android:layout_below="@id/calories1"
+                android:layout_toEndOf="@id/yellow_background"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="9dp"/>
+
+            <ImageView
+                android:id="@+id/line6"
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:src="@drawable/line"
+                android:layout_below="@id/yellow_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"/>
+            <!--       jumping rope    -->
+
+            <!--       holding jumping rope-->
+            <ImageView
+                android:id="@+id/blue_background"
+                style="@style/AdditionalExercisesBg"
+                android:src="@drawable/blue_bg"
+                android:layout_below="@id/line6"
+                android:layout_marginTop="18dp"/>
+
+            <ImageView
+                android:id="@+id/holding_jumping_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/holding_jumping"
+                android:layout_below="@id/line6"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/holding_jumping_rope_text"
+                android:text="@string/holding_jumping_rope"
+                android:layout_below="@id/line6"
+                android:layout_toEndOf="@id/blue_background"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"/>
+
+            <ImageView
+                android:id="@+id/calories2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calories"
+                android:layout_below="@id/holding_jumping_rope_text"
+                android:layout_toEndOf="@id/blue_background"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:id="@+id/kcal_135_text"
+                android:text="@string/kcal_135"
+                android:layout_below="@id/holding_jumping_rope_text"
+                android:layout_toEndOf="@id/calories2"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/vertical_line4"
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:src="@drawable/vertical_line"
+                android:layout_below="@id/holding_jumping_rope_text"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@id/kcal_135_text"
+                android:layout_marginStart="11dp"/>
+
+            <ImageView
+                android:id="@+id/clock4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:layout_below="@id/holding_jumping_rope_text"
+                android:layout_toEndOf="@id/vertical_line4"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="10.5dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:text="@string/min_8"
+                android:layout_below="@id/holding_jumping_rope_text"
+                android:layout_toEndOf="@id/clock4"
+                android:layout_marginStart="5.49dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/beginner_text4"
+                style="@style/PopularExerciseText"
+                android:text="@string/beginner"
+                android:layout_below="@id/calories2"
+                android:layout_toEndOf="@id/blue_background"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="9dp"/>
+
+            <ImageView
+                android:id="@+id/line7"
+                android:layout_width="370dp"
+                android:layout_height="20dp"
+                android:src="@drawable/line"
+                android:layout_below="@id/blue_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"/>
+            <!--       holding jumping rope-->
+
+            <!--       sitting dumbbells-->
+            <ImageView
+                android:id="@+id/red_background"
+                style="@style/AdditionalExercisesBg"
+                android:src="@drawable/red_bg"
+                android:layout_below="@id/line7"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="90dp"/>
+
+            <ImageView
+                android:id="@+id/sitting_dumbbell_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sitting_dumbell"
+                android:layout_below="@id/line7"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="22dp"/>
+
+            <TextView
+                style="@style/category_text"
+                android:id="@+id/sitting_dumbbell_text"
+                android:text="@string/sitting_dumbbells"
+                android:layout_below="@id/line7"
+                android:layout_toEndOf="@id/red_background"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"/>
+
+            <ImageView
+                android:id="@+id/calories3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calories"
+                android:layout_below="@id/sitting_dumbbell_text"
+                android:layout_toEndOf="@id/red_background"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:id="@+id/kcal_135_text2"
+                android:text="@string/kcal_135"
+                android:layout_below="@id/sitting_dumbbell_text"
+                android:layout_toEndOf="@id/calories3"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/vertical_line5"
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:src="@drawable/vertical_line"
+                android:layout_below="@id/sitting_dumbbell_text"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@id/kcal_135_text2"
+                android:layout_marginStart="11dp"/>
+
+            <ImageView
+                android:id="@+id/clock5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"
+                android:layout_below="@id/sitting_dumbbell_text"
+                android:layout_toEndOf="@id/vertical_line5"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="10.5dp"/>
+
+            <TextView
+                style="@style/PopularExerciseText"
+                android:text="@string/min_5"
+                android:layout_below="@id/sitting_dumbbell_text"
+                android:layout_toEndOf="@id/clock5"
+                android:layout_marginStart="5.49dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/beginner_text5"
+                style="@style/PopularExerciseText"
+                android:text="@string/beginner"
+                android:layout_below="@id/calories3"
+                android:layout_toEndOf="@id/red_background"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="9dp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+
+            </FrameLayout>
+            <!--       sitting dumbbells-->
+            <!--       additional exercises-->
+            </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>
