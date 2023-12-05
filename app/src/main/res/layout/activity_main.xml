@@ -178,12 +178,12 @@
                     <TextView
                         android:id="@+id/goal_item1"
                         style="@style/SelectGoalsText"
-                        android:text="@string/loose_weight"
-                        android:background="@drawable/gray2_bg"
-                        android:paddingVertical="9dp"
-                        android:paddingHorizontal="10dp"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="16dp"/>
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/gray2_bg"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="9dp"
+                        android:text="@string/loose_weight" />
 
                     <TextView
                         android:id="@+id/goal_item2"
@@ -236,87 +236,98 @@
                 android:layout_below="@id/horizontal_view"
                 android:layout_marginTop="27dp"/>
 
-            <ImageView
-                style="@style/CategoryItem"
-                android:id="@+id/yoga_cat"
-                android:src="@drawable/yoga"
-                android:layout_marginStart="22dp"/>
+            <HorizontalScrollView
+                android:id="@+id/horizontal_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_below="@id/set_category">
 
-            <ImageView
-                style="@style/CategoryItem"
-                android:id="@+id/gym_cat"
-                android:src="@drawable/gym"
-                android:layout_marginStart="27dp"
-                android:layout_toEndOf="@+id/yoga_cat"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <ImageView
-                style="@style/CategoryItem"
-                android:id="@+id/cardio_cat"
-                android:src="@drawable/cardio"
-                android:layout_marginStart="27dp"
-                android:layout_toEndOf="@+id/gym_cat"/>
+                    <ImageView
+                        style="@style/CategoryItem"
+                        android:id="@+id/yoga_cat"
+                        android:src="@drawable/yoga"
+                        android:layout_marginStart="22dp"/>
 
-            <ImageView
-                style="@style/CategoryItem"
-                android:id="@+id/stretch_cat"
-                android:src="@drawable/stretch"
-                android:layout_marginStart="27dp"
-                android:layout_toEndOf="@+id/cardio_cat"/>
+                    <TextView
+                        style="@style/category_text"
+                        android:id="@+id/yoga_text"
+                        android:text="@string/yoga"
+                        android:layout_marginStart="-48dp"
+                        android:layout_marginTop="90dp"/>
 
-            <ImageView
-                style="@style/CategoryItem"
-                android:id="@+id/fullbody_cat"
-                android:src="@drawable/fullbody"
-                android:layout_marginStart="27dp"
-                android:layout_toEndOf="@+id/stretch_cat"/>
+                    <ImageView
+                        style="@style/CategoryItem"
+                        android:id="@+id/gym_cat"
+                        android:src="@drawable/gym"
+                        android:layout_marginStart="34dp" />
 
-            <TextView
-                style="@style/category_text"
-                android:id="@+id/yoga_text"
-                android:text="@string/yoga"
-                android:layout_below="@id/yoga_cat"
-                android:layout_marginStart="36dp"/>
+                    <TextView
+                        style="@style/category_text"
+                        android:id="@+id/gym_text"
+                        android:text="@string/gym"
+                        android:layout_marginStart="-48dp"
+                        android:layout_marginTop="90dp"/>
 
-            <TextView
-                style="@style/category_text"
-                android:id="@+id/gym_text"
-                android:text="@string/gym"
-                android:layout_below="@id/yoga_cat"
-                android:layout_marginStart="59dp"
-                android:layout_toEndOf="@+id/yoga_text"/>
+                    <ImageView
+                        style="@style/CategoryItem"
+                        android:id="@+id/cardio_cat"
+                        android:src="@drawable/cardio"
+                        android:layout_marginStart="34dp" />
 
-            <TextView
-                style="@style/category_text"
-                android:id="@+id/cardio_text"
-                android:text="@string/cardio"
-                android:layout_below="@id/yoga_cat"
-                android:layout_marginStart="51dp"
-                android:layout_toEndOf="@+id/gym_text"/>
+                    <TextView
+                        style="@style/category_text"
+                        android:id="@+id/cardio_text"
+                        android:text="@string/cardio"
+                        android:layout_marginStart="-55dp"
+                        android:layout_marginTop="90dp"/>
 
-            <TextView
-                style="@style/category_text"
-                android:id="@+id/stretch_text"
-                android:text="@string/stretch"
-                android:layout_below="@id/yoga_cat"
-                android:layout_marginStart="46dp"
-                android:layout_toEndOf="@+id/cardio_text"/>
 
-            <TextView
-                style="@style/category_text"
-                android:id="@+id/fullbody_text"
-                android:text="@string/full_body"
-                android:layout_below="@id/yoga_cat"
-                android:layout_marginStart="34dp"
-                android:layout_marginEnd="-50dp"
-                android:layout_toEndOf="@+id/stretch_text"/>
+                    <ImageView
+                        style="@style/CategoryItem"
+                        android:id="@+id/stretch_cat"
+                        android:src="@drawable/stretch"
+                        android:layout_marginStart="32dp"/>
+
+                    <TextView
+                        style="@style/category_text"
+                        android:id="@+id/stretch_text"
+                        android:text="@string/stretch"
+                        android:layout_marginStart="-55dp"
+                        android:layout_marginTop="90dp"/>
+
+
+                    <ImageView
+                        style="@style/CategoryItem"
+                        android:id="@+id/fullbody_cat"
+                        android:src="@drawable/yoga"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="-20dp"/>
+
+                    <TextView
+                        style="@style/category_text"
+                        android:id="@+id/fullbody_text"
+                        android:text="@string/full_body"
+                        android:layout_marginStart="-42dp"
+                        android:layout_marginTop="90dp"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
 
             <ImageView
                 android:id="@+id/line1"
                 android:layout_width="370dp"
                 android:layout_height="20dp"
                 android:src="@drawable/line"
-                android:layout_below="@id/yoga_text"
-                android:layout_marginTop="16dp"
+                android:layout_below="@id/horizontal_view2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"/>
             <!--        category-->
 
@@ -325,13 +336,13 @@
                 style="@style/TitleContent"
                 android:id="@+id/popular_exercises"
                 android:text="@string/popular_exercise"
-                android:layout_below="@id/yoga_text"
+                android:layout_below="@id/horizontal_view2"
                 android:layout_marginTop="39dp"/>
 
             <TextView
                 style="@style/SeeAll"
                 android:layout_toEndOf="@id/popular_exercises"
-                android:layout_below="@id/fullbody_text"
+                android:layout_below="@id/horizontal_view2"
                 android:layout_marginTop="41dp"
                 android:layout_marginStart="207dp"/>
 
@@ -366,7 +377,8 @@
                 android:id="@+id/full_shot_text"
                 style="@style/category_text"
                 android:text="@string/full_shot_woman"
-                android:layout_below="@id/shot_beautiful_girl" />
+                android:layout_below="@id/shot_beautiful_girl"
+                android:layout_marginStart="22dp"/>
 
             <TextView
                 android:id="@+id/beginner_text"
@@ -442,7 +454,8 @@
                 android:id="@+id/looking_shocked_text"
                 style="@style/category_text"
                 android:text="@string/athlete_practicing"
-                android:layout_below="@id/looking_shocked_girl" />
+                android:layout_below="@id/looking_shocked_girl"
+                android:layout_marginStart="22dp"/>
 
             <TextView
                 android:id="@+id/beginner_text2"
@@ -516,7 +529,8 @@
                 android:id="@+id/greek_salad_text"
                 android:text="@string/greek_salad"
                 android:layout_below="@id/greek_salad"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="22dp"/>
 
             <TextView
                 style="@style/PopularExerciseText"
@@ -547,7 +561,8 @@
                 android:id="@+id/fresh_salad_text"
                 android:text="@string/salad_fresh"
                 android:layout_below="@id/fresh_salad"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="22dp"/>
 
             <TextView
                 style="@style/PopularExerciseText"

@@ -65,7 +65,6 @@
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="android:layout_marginTop">13dp</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:layout_marginStart">22dp</item>
     </style>
     
     <style name="PopularExerciseText">
