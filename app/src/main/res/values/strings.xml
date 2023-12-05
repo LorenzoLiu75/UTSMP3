@@ -12,11 +12,20 @@
     <string name="healty">Healty</string>
     <string name="category">CATEGORY</string>
     <string name="see_all">See all</string>
-    <string name="yoga">Yoga</string>
-    <string name="gym">Gym</string>
-    <string name="cardio">Cardio</string>
-    <string name="stretch">Stretch</string>
-    <string name="full_body">Full Body</string>
+    <integer-array name="data_img">
+        <item>@drawable/yoga</item>
+        <item>@drawable/gym</item>
+        <item>@drawable/cardio</item>
+        <item>@drawable/stretch</item>
+        <item>@drawable/yoga</item>
+    </integer-array>
+    <string-array name="data_name">
+        <item>Yoga</item>
+        <item>Gym</item>
+        <item>Cardio</item>
+        <item>Stretch</item>
+        <item>Full Body</item>
+    </string-array>
     <string name="popular_exercise">POPULAR EXERCISE</string>
     <string name="full_shot_woman">Full Shot Woman Stretching Arm</string>
     <string name="beginner">Beginner</string>
